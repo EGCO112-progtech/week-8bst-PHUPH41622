@@ -126,7 +126,7 @@ void printTree(TreeNodePtr treePtr, int step)
    if (treePtr != NULL)
    {
       printTree(treePtr->rightPtr, step);    // Recursion to the left
-      for(int i = 0; i < step; i++) {
+      for(int i = 0; i < step-1; i++) {
          printf("   ");
       }
       printf("%3d\n", treePtr->data); // print the value
