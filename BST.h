@@ -120,18 +120,17 @@ void postOrder(TreeNodePtr treePtr)
    } // end if
 } // end
 
-int count = 0;
-void printTree(TreeNodePtr treePtr) 
+void printTree(TreeNodePtr treePtr, int step) 
 {
-   count++;
+   step++;
    if (treePtr != NULL)
    {
-      printTree(treePtr->rightPtr);    // Recursion to the left
-      for(int i = 0; i < count; i++) {
-         printf("    ");
+      printTree(treePtr->rightPtr, step);    // Recursion to the left
+      for(int i = 0; i < step; i++) {
+         printf("   ");
       }
       printf("%3d\n", treePtr->data); // print the value
-      printTree(treePtr->leftPtr);   // Recursion to the right
+      printTree(treePtr->leftPtr, step);   // Recursion to the right
    } // end if
-   count--;
+   step--;
 }

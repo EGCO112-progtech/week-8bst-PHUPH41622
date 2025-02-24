@@ -28,7 +28,7 @@ int main(int argc, char **argv)
    postOrder(b.root);
 
    printf("\nPrint Tree:\n");
-   printTree(b.root);
+   printTree(b.root, 0);
    
    printf("\n");
 } // end main
